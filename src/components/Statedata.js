@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react'
-import {Accordion,Card} from 'react-bootstrap'
+import {Accordion,Card,Badge,Button} from 'react-bootstrap'
 
 
 
@@ -29,9 +29,12 @@ class Statedata extends React.Component{
         // keys.shift();
 
         return(
-            <div className="row">
+            <div className="row" id="details">
                 <div className="col-md-12">
-
+                <Button variant="info" href="#details">
+                State-wise Details 
+                </Button>
+                
                 <Accordion >
                     {
                         keys.map((item,key)=>{

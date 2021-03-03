@@ -24,19 +24,22 @@ class India extends React.Component{
         render(){
         return(
             <div className="row">
+
                 <div className="col-md-12">
-                <img src="https://www.countryflags.io/in/shiny/64.png"/>
-                <h3>INDIA</h3>
+                    <div className="flex-container" style={{display:'flex',alignItems:'center',padding:10}}>
+                        <div><img src="https://www.countryflags.io/in/shiny/64.png" style={{maxWidth:50,minWidth:50,margin:10}}/> </div>
+                        <div style={{marginTop:5}}><h3>INDIA</h3></div>
+                    </div>
                 </div>
 
                 <div className="col-md-12">
 
                      <div className="row">
                         <div className="col-md-3">
-                            <Card style={{ width: '18rem' }} className="badge badge-primary"> 
+                            <Card style={{ width: '100%' }} className="badge badge-primary"> 
                                 <Card.Body className="text-center">
                                     <Card.Title>TOTAL CASES</Card.Title>
-                                    <h3>{this.state.data.cases} (+{this.state.data.todayCases})</h3>
+                                    <h3>{this.state.data.cases} <h5>(+{this.state.data.todayCases})</h5></h3>
                                     <Card.Text>
                                      
                                     </Card.Text>
@@ -44,10 +47,10 @@ class India extends React.Component{
                                 </Card>
                         </div>
                         <div className="col-md-3">
-                            <Card style={{ width: '18rem' }} className="badge badge-warning"> 
+                            <Card style={{ width: '100%' }} className="badge badge-warning"> 
                                 <Card.Body className="text-center">
                                     <Card.Title>ACTIVE</Card.Title>
-                                    <h3>{this.state.data.active} (+{this.state.data.todayCases-this.state.data.todayRecovered})</h3>
+                                    <h3>{this.state.data.active} <h5>(+{this.state.data.todayCases-this.state.data.todayRecovered})</h5></h3>
                                     <Card.Text>
                                      
                                     </Card.Text>
@@ -55,10 +58,10 @@ class India extends React.Component{
                                 </Card>
                         </div>
                         <div className="col-md-3">
-                            <Card style={{ width: '18rem' }} className="badge badge-success"> 
+                            <Card style={{ width: '100%' }} className="badge badge-success"> 
                                 <Card.Body className="text-center">
                                     <Card.Title>RECOVERED</Card.Title>
-                                    <h3>{this.state.data.recovered} (+{this.state.data.todayRecovered})</h3>
+                                    <h3>{this.state.data.recovered} <h5>(+{this.state.data.todayRecovered})</h5></h3>
                                     <Card.Text>
                                      
                                     </Card.Text>
@@ -66,10 +69,10 @@ class India extends React.Component{
                                 </Card>
                         </div>
                         <div className="col-md-3">
-                            <Card style={{ width: '18rem' }} className="badge badge-danger"> 
+                            <Card style={{ width: '100%' }} className="badge badge-danger"> 
                                 <Card.Body className="text-center">
                                     <Card.Title>DEATHS</Card.Title>
-                                    <h3>{this.state.data.deaths}(+{this.state.data.todayDeaths})</h3>
+                                    <h3>{this.state.data.deaths}<h5>(+{this.state.data.todayDeaths})</h5></h3>
                                     <Card.Text>
                                      
                                     </Card.Text>
@@ -82,9 +85,9 @@ class India extends React.Component{
                 </div>
                 
 
-                <br/>
-                <br/><br/><br/><br/><br/>
-                <div className="col-md-12">
+                
+                <div className="col-md-12" style={{marginTop:30}}>
+                    
                     <Statedata/>
                 </div>
 
