@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react'
-import {Accordion,Card,Badge,Button} from 'react-bootstrap'
+import {Accordion,Card,Button} from 'react-bootstrap'
 
 
 
@@ -40,7 +40,7 @@ class Statedata extends React.Component{
                         keys.map((item,key)=>{
 
                             let districts= this.state.stateData[item].districtData;
-                            let district_keys=Object.keys(districts);
+                            //let district_keys=Object.keys(districts);
                             // console.log(district_keys)
                             // district_keys.shift()
 

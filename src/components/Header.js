@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export default function Header(){
 
         return(
-            <Navbar bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
             <Navbar.Brand href="#home">
             <img
                 alt=""
@@ -16,11 +16,17 @@ export default function Header(){
             />{' '}
             Covid-19 Tracker
             </Navbar.Brand>
-            
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Link className="nav-link" to="/india">India</Link>
               <Link className="nav-link" to="/world">Global</Link>
             </Nav>
+            <Nav>
+              <Nav.Link href="https://home.rsoclabs.com">RSOC Labs</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+            
           </Navbar>
         )
 }

@@ -1,15 +1,12 @@
 import React,{Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import India from './components/India'
 import World from './components/World'
 import Header from './components/Header';
 
 class App extends Component{
 
-constructor(props){
-  super(props)
-}
 
 render(){
   return(
